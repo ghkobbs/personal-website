@@ -1,3 +1,101 @@
 import React from "react"
+import Layout from '../components/layout'
+import SEO from "../components/seo"
+import LayoutStyles from '../components/layout.module.scss'
+import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
+import { profilepic, nodejs, css3, js, php, mongodb, git, express } from '../../public/images/'
 
-export default () => <div>Hello world!</div>
+const HomePage = () => {
+    const { site } = useStaticQuery(
+        graphql`
+        query {
+            site {
+            siteMetadata {
+                title
+                description
+                author
+            }
+            }
+        }
+        `
+    )
+    return (
+        <Layout>
+            <SEO title={site.siteMetadata.author} description={site.siteMetadata.description} />            
+            <div class={LayoutStyles.container}>
+                <section className={LayoutStyles.topSection}>
+                    <div className={LayoutStyles.introSection+ " " +LayoutStyles.leftSection}>
+                        <div className={LayoutStyles.introSectionWrapper}>
+                            <div className={LayoutStyles.introSectionInnerWrapper}>
+                                <p><span className={LayoutStyles.greeting}>Hello!</span> I am Maxwell, a full-stack web developer based in Accra, Ghana. I enjoy creating user-centric, delightful and human experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={LayoutStyles.introSection+ " " +LayoutStyles.rightSection}>
+                        <div className={LayoutStyles.introSectionWrapper}>
+                            <div className={LayoutStyles.introSectionInnerWrapper}>
+                                <img src={profilepic} alt={site.siteMetadata.author}/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={LayoutStyles.middleSection}>
+                    <div className={LayoutStyles.middleSectionWrapper}>
+                        <div className={LayoutStyles.middleSectionInnerWrapper}>
+                            <div className={LayoutStyles.portfolioWrapper}>
+                                <div className={LayoutStyles.portfolioInnerWrapper}>
+                                    <h3 className={LayoutStyles.middleSectionTitle}>Featured</h3>
+                                    <ul className={LayoutStyles.portfolio}>
+                                        <li className={LayoutStyles.portfolioItem}>
+                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
+                                            <h4>Design &amp; Development</h4>
+                                        </li>
+                                        <li className={LayoutStyles.portfolioItem}>
+                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
+                                            <h4>Design &amp; Development</h4>
+                                        </li>
+                                        <li className={LayoutStyles.portfolioItem}>
+                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
+                                            <h4>Design &amp; Development</h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className={LayoutStyles.stacksWrapper}>
+                                <div className={LayoutStyles.stacksInnerWrapper}>
+                                    <h3 className={LayoutStyles.middleSectionTitle}>Stacks</h3>
+                                    <ul className={LayoutStyles.stacks}>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={nodejs} alt="Nodejs" />
+                                        </li>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={mongodb} alt="Mongodb" />
+                                        </li>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={express} alt="Expressjs" />
+                                        </li>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={js} alt="Javascript" />
+                                        </li>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={php} alt="PHP: Hypertext Preprocessor" />
+                                        </li>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={css3} alt="Cascading Stylesheet" />
+                                        </li>
+                                        <li className={LayoutStyles.stacksItem}>
+                                            <img src={git} alt="Git" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </Layout>
+    )
+}
+
+export default HomePage
