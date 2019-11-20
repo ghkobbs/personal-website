@@ -5,5 +5,13 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Full-stack Developer`,
+    description: `Freelance full stack Web Developer and Designer. I am available for freelance and remote contract jobs. You can reach me at maxkobbs@gmail.com`,
+    author: `Maxwell Morrison`,
+  },
+  plugins: [
+    'gatsby-plugin-sass',
+    `gatsby-plugin-react-helmet`,
+  ]
 }
