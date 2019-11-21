@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import LayoutStyles from '../components/layout.module.scss'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
-import { profilepic, nodejs, css3, js, php, mongodb, git, express } from '../images/'
 
 const WorkPage = () => {
     const { site } = useStaticQuery(

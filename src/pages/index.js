@@ -7,15 +7,28 @@ import { useStaticQuery, graphql } from "gatsby"
 import { profilepic, nodejs, css3, js, php, mongodb, git, express } from '../images/'
 
 const HomePage = () => {
-    const { site } = useStaticQuery(
+    const { site, allMarkdownRemark } = useStaticQuery(
         graphql`
         query {
             site {
-            siteMetadata {
-                title
-                description
-                author
-            }
+                siteMetadata {
+                    title
+                    description
+                    author
+                }
+            },
+            allMarkdownRemark {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            role
+                        }
+                        fields {
+                            slug
+                        }
+                    }
+                }
             }
         }
         `
@@ -47,18 +60,14 @@ const HomePage = () => {
                                 <div className={LayoutStyles.portfolioInnerWrapper}>
                                     <h3 className={LayoutStyles.middleSectionTitle}>Featured</h3>
                                     <ul className={LayoutStyles.portfolio}>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
+                                        { allMarkdownRemark.edges.map((edge) => {
+                                            return (
+                                                <li className={LayoutStyles.portfolioItem}>
+                                                    <Link to={`/projects/${edge.node.fields.slug}`} className={LayoutStyles.link}><h3>{ edge.node.frontmatter.title }</h3></Link>
+                                                    <h4>{ edge.node.frontmatter.role }</h4>
+                                                </li>
+                                            )
+                                        })}                                        
                                     </ul>
                                 </div>
                             </div>
