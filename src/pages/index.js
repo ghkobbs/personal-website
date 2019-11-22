@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { profilepic, nodejs, css3, js, php, mongodb, git, express } from '../images/'
 
 const HomePage = () => {
-    const { site, allMarkdownRemark } = useStaticQuery(
+    const { site, allContentfulProjectItem } = useStaticQuery(
         graphql`
         query {
             site {
@@ -17,16 +17,17 @@ const HomePage = () => {
                     author
                 }
             },
-            allMarkdownRemark {
+            allContentfulProjectItem(
+                sort: {
+                    fields: publishedDate,
+                    order: DESC
+                }
+            ) {
                 edges {
                     node {
-                        frontmatter {
-                            title
-                            role
-                        }
-                        fields {
-                            slug
-                        }
+                        title
+                        slug
+                        role
                     }
                 }
             }
@@ -60,11 +61,11 @@ const HomePage = () => {
                                 <div className={LayoutStyles.portfolioInnerWrapper}>
                                     <h3 className={LayoutStyles.middleSectionTitle}>Featured</h3>
                                     <ul className={LayoutStyles.portfolio}>
-                                        { allMarkdownRemark.edges.map((edge) => {
+                                        { allContentfulProjectItem.edges.map((edge) => {
                                             return (
                                                 <li className={LayoutStyles.portfolioItem}>
-                                                    <Link to={`/projects/${edge.node.fields.slug}`} className={LayoutStyles.link}><h3>{ edge.node.frontmatter.title }</h3></Link>
-                                                    <h4>{ edge.node.frontmatter.role }</h4>
+                                                    <Link to={`/projects/${edge.node.slug}`} className={LayoutStyles.link}><h3>{ edge.node.title }</h3></Link>
+                                                    <h4>{ edge.node.role }</h4>
                                                 </li>
                                             )
                                         })}                                        

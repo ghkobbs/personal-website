@@ -6,15 +6,29 @@ import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
 
 const WorkPage = () => {
-    const { site } = useStaticQuery(
+    const { site, allContentfulProjectItem } = useStaticQuery(
         graphql`
         query {
             site {
-            siteMetadata {
-                title
-                description
-                author
-            }
+                siteMetadata {
+                    title
+                    description
+                    author
+                }
+            },
+            allContentfulProjectItem(
+                sort: {
+                    fields: publishedDate,
+                    order: DESC
+                }
+            ) {
+                edges {
+                    node {
+                        title
+                        slug
+                        role
+                    }
+                }
             }
         }
         `
@@ -29,38 +43,14 @@ const WorkPage = () => {
                             <div className={LayoutStyles.portfolioWrapper}>
                                 <div className={LayoutStyles.portfolioInnerWrapper}>
                                     <ul className={LayoutStyles.portfolio}>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
-                                        <li className={LayoutStyles.portfolioItem}>
-                                            <a href="#" className={LayoutStyles.link}><h3>incident reporting for drivers</h3></a>
-                                            <h4>Design &amp; Development</h4>
-                                        </li>
+                                        { allContentfulProjectItem.edges.map((edge) => {
+                                            return (
+                                                <li className={LayoutStyles.portfolioItem}>
+                                                    <Link to={`/projects/${edge.node.slug}`} className={LayoutStyles.link}><h3>{ edge.node.title }</h3></Link>
+                                                    <h4>{ edge.node.role }</h4>
+                                                </li>
+                                            )
+                                        })}
                                     </ul>
                                 </div>
                             </div>
