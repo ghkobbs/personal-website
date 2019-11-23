@@ -312,7 +312,7 @@ body {
     background-color: var(--color-scheme-background);
     color: var(--color-scheme-text-color);
     font-size: 100%;
-    font-family: 'Alata', sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -344,7 +344,7 @@ h1 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
@@ -361,7 +361,7 @@ h2 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
@@ -378,7 +378,7 @@ h3 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
@@ -395,7 +395,7 @@ h4 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1rem;
@@ -412,7 +412,7 @@ h5 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
@@ -429,7 +429,7 @@ h6 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;
@@ -795,6 +795,7 @@ pre tt:after {
     width: 35%;
 }
 .top-section .left-section .intro-Section-Inner-Wrapper p{
+    font-family: 'Alata', sans-serif;
     font-size: calc(0.7rem + 2vw);
     line-height: calc(1.3rem + 2vw);
     color: var(--color-scheme-text-color);
@@ -860,6 +861,7 @@ pre tt:after {
     font-size: calc(0.6rem + 1vw);
 }
 .portfolio .portfolio-item h4 {
+    font-family: 'Assistant', sans-serif;
     font-size: calc(0.5rem + 0.5vw);
     font-weight: normal;
     color: var(--color-scheme-text-alt-colour);
@@ -985,6 +987,36 @@ pre tt:after {
     padding: 50px 0;
     width: 30%;
     margin: auto;
+}
+.project-image-wrapper img, .project-mobile-image-wrapper img {
+    margin-bottom: 0;
+}
+.about-section .about-section-wrapper .about-section-inner-wrapper {
+    padding: 50px 0;
+}
+.about-image-wrapper{
+    width: 1100px;
+    height: 500px;
+    overflow: hidden;
+    max-width: 95%;
+    margin: auto;
+}
+.about-image-inner-wrapper {
+    padding: 0px 50px;
+}
+.about-image-inner-wrapper img{
+    height: 100%;
+}
+.about-section-inner-wrapper .about-text-wrapper {
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+}
+.about-text-wrapper .about-text-inner-wrapper {
+    padding: 0px 80px 0 50px;
+}
+.about-text-wrapper .about-text-inner-wrapper p {
+    font-weight: lighter;
 }
 .footer {
     margin-top: 50px;
