@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import LayoutStyles from '../components/layout.module.scss'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
-import { profilepic, nodejs, css3, js, php, mongodb, git, express } from '../images/'
+import { profile, nodejs, css3, js, php, mongodb, git, express } from '../images/'
 
 const HomePage = () => {
     const { site, allContentfulProjectItem } = useStaticQuery(
@@ -42,14 +42,14 @@ const HomePage = () => {
                     <div className={LayoutStyles.introSection+ " " +LayoutStyles.leftSection}>
                         <div className={LayoutStyles.introSectionWrapper}>
                             <div className={LayoutStyles.introSectionInnerWrapper}>
-                                <p><span className={LayoutStyles.greeting}>Hello!</span> I am Maxwell, a full-stack web developer based in Accra, Ghana. I enjoy creating user-centric, delightful and human experiences.</p>
+                                <p><span className={LayoutStyles.greeting}>Hello!</span> I am Maxwell, a full-stack web developer based in Accra, Ghana. I enjoy creating clean and user-friendly website using latest treads and modern solutions.</p>
                             </div>
                         </div>
                     </div>
                     <div className={LayoutStyles.introSection+ " " +LayoutStyles.rightSection}>
                         <div className={LayoutStyles.introSectionWrapper}>
                             <div className={LayoutStyles.introSectionInnerWrapper}>
-                                <img src={profilepic} alt={site.siteMetadata.author}/>
+                                <img src={profile} alt={site.siteMetadata.author}/>
                             </div>
                         </div>
                     </div>
