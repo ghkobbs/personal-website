@@ -90,7 +90,7 @@ header .navigation-list .navigation-list-item .link {
 @media only screen and (max-width: 600px) {
     .mobile-menu-button {
         position: absolute;
-        top: 37px;
+        top: 29px;
         right: 30px;
         display: block;
         width: 40px;
@@ -101,6 +101,13 @@ header .navigation-list .navigation-list-item .link {
         height: 5px;
         background-color: var(--color-scheme-text-link-colour);
         margin: 8px 0;
+    }
+    header .site-logo {
+        width: 47px;
+        height: 47px;
+    }
+    header .site-logo a {
+        line-height: 2.8rem;
     }
     header nav {
         display: flex;
