@@ -64,22 +64,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Media Queries */
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
-
 article,
 aside,
 details,
@@ -848,6 +832,9 @@ pre tt:after {
 .portfolio .portfolio-item {
     margin-bottom: 40px;
 }
+.portfolio .portfolio-item:last-child {
+    margin-bottom: 0px;
+}
 .portfolio .portfolio-item .link {
     text-decoration: none;
     display: inline-block;
@@ -999,9 +986,8 @@ pre tt:after {
 }
 .about-image-wrapper{
     width: 1100px;
-    height: 500px;
     overflow: hidden;
-    max-width: 95%;
+    max-width: 100%;
     margin: auto;
 }
 .about-image-inner-wrapper {
@@ -1037,13 +1023,121 @@ pre tt:after {
     text-decoration: none;
 }
 @media only screen and (max-width: 1025px) {
+    .container {
+        padding: 0 30px;
+    }
+    .top-section .intro-section.left-section {
+        width: 50%;
+    }
+    .top-section .intro-section.right-section {
+        width: 50%;
+    }
+    .featured-image-section-inner-wrapper {
+        padding: 0px 80px;
+    }
+    .featured-image {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 15px 20px 0 20px;
+    }
     .footer .footer-wrapper {
         font-size: calc(0.5rem + 1vw);
         line-height: calc(0.5rem + 1vw)
     }
 }
+@media only screen and (max-width: 768px) {
+    .featured-image-section-inner-wrapper {
+        padding: 0px 50px;
+    }
+    .project-summary-section-wrapper {
+        padding: 0px 80px;
+    }
+    .project-summary-section-inner-wrapper .project-summary-content.project-summary-left-content {
+        width: 100%;
+        padding-right: 0;
+    }
+    .project-summary-section-inner-wrapper .project-summary-content.project-summary-right-content {
+        width: 100%;
+    }
+    .project-image-content {
+        height: auto;
+        min-height: 500px;
+    }
+    .project-mobile-image-wrapper {
+        width: 65%;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .container {
+        padding: 0 30px;
+    }
+    .top-section .intro-section.left-section {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .top-section .intro-section.right-section {
+        width: 80%;
+    }
+    .middle-section-inner-wrapper .portfolio-wrapper, .middle-section-inner-wrapper .stacks-wrapper {
+        width: 100%;
+    }
+    .middle-section-inner-wrapper .portfolio-wrapper {
+        margin-bottom: 50px;
+    }
+    .stacks .stacks-item {
+        padding: 15px 15px 15px 0;
+        margin-right: 15px;
+    }
+    .about-section .about-section-wrapper .about-section-inner-wrapper {
+        padding: 50px 0 0;
+    }
+    .about-image-inner-wrapper {
+        padding: 0;
+    }
+    .about-image-inner-wrapper img {
+        height: auto;
+        margin-bottom: 0;
+    }
+    .about-text-wrapper .about-text-inner-wrapper {
+        padding: 0px 30px 0 30px;
+    }
+    .featured-image-section-inner-wrapper {
+        padding: 0px;
+    }
+    .project-summary-section-wrapper {
+        padding: 0px 35px;
+    }
+    .project-image-content {
+        width: 100%
+    }
+    .project-mobile-image-wrapper {
+        width: 40%;
+    }
+    .project-image-content:nth-child(3) {
+        background-color: var(--color-scheme-project-images-item);
+    }
+    .project-image-content:nth-child(4) {
+        background-color: var(--color-scheme-project-images-item-alt);
+    }
+    .work-section .portfolio {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .work-section .portfolio-item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .portfolio .portfolio-item .link h3 {
+        font-size: calc(1.6rem + 1vw);
+    }
+}
 @media only screen and (max-width: 480px) {
     html {
         font-size: 100%;
+    }
+    .featured-image {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 10px 15px 0 15px;
     }
 }

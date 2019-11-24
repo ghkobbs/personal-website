@@ -7,6 +7,7 @@ import Helmet from "react-helmet"
 import favicon from '../images/favicon.png'
 
 const Layout = (props) => {
+
     return (
         <div>
             <div className={Styles.mainContentGroup}>

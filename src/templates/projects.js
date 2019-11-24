@@ -45,7 +45,7 @@ const Project = (props) => {
         <Layout>
 			<SEO title={props.data.contentfulProjectItem.title} description={props.data.contentfulProjectItem.tagline} />            
 			<div className={LayoutStyles.featuredImageSection}>
-				<div class={LayoutStyles.container}>
+				<div className={LayoutStyles.container}>
 					<div className="top-main-section">
 						<div className="top-main-section-wrapper">
 							<div className={LayoutStyles.topMainSectionInnerWrapper}>
@@ -64,7 +64,7 @@ const Project = (props) => {
 				</div>
 			</div>
 			<div className={LayoutStyles.projectSummarySection}>
-				<div class={LayoutStyles.container}>
+				<div className={LayoutStyles.container}>
 					<div className={LayoutStyles.projectSummarySectionWrapper}>
 						<div className={LayoutStyles.projectSummarySectionInnerWrapper}>
 							<div className={[LayoutStyles.projectSummaryContent+" "+LayoutStyles.projectSummaryLeftContent]}>
@@ -82,12 +82,12 @@ const Project = (props) => {
 				</div>
 			</div>
 			<div className={LayoutStyles.projectImagesSection}>
-				<div class={LayoutStyles.container}>
+				<div className={LayoutStyles.container}>
 					<div className={LayoutStyles.projectImagesSectionWrapper}>
 						<div className={LayoutStyles.projectImagesSectionInnerWrapper}>
 							{ props.data.contentfulProjectItem.desktopImages.map((image) => {
 								return(
-									<div className={LayoutStyles.projectImageContent}>
+									<div key={image.file.url.toString()} className={LayoutStyles.projectImageContent}>
 										<div className={LayoutStyles.projectImageWrapper}>
 											<img src={image.file.url} alt={image.title} />
 										</div>
@@ -96,7 +96,7 @@ const Project = (props) => {
 							})}
 							{ props.data.contentfulProjectItem.mobileImages.map((image) => {
 								return(
-									<div className={LayoutStyles.projectImageContent}>
+									<div key={image.file.url.toString()} className={LayoutStyles.projectImageContent}>
 										<div className={LayoutStyles.projectMobileImageWrapper}>
 											<img src={image.file.url} alt={image.title} />
 										</div>

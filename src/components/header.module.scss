@@ -15,9 +15,11 @@ header .logo-wrapper {
     flex: auto;
 }
 header .site-logo{
+    position: relative;
     width: 65px;
     height: 65px;
     border: 2px solid var(--color-scheme-text-link-colour);
+    z-index: 2222;
 }
 header .site-logo:hover{
     background-color: var(--color-scheme-text-link-colour);
@@ -40,6 +42,9 @@ header .site-logo h1 a {
 header .site-logo h1 a:hover {
     color: var(--color-scheme-primary);
 }
+.mobile-menu-button {
+    display: none;
+}
 header nav {
     width: auto;
     display: flex;
@@ -59,6 +64,9 @@ header .navigation-list .navigation-list-item {
     padding: 0;
     margin-right: 1rem;
 }
+header .navigation-list .navigation-list-item:last-child {
+    margin-right: 0;
+}
 header .navigation-list .navigation-list-item .link {
     text-decoration: none;
     border: 2px solid transparent;
@@ -68,10 +76,75 @@ header .navigation-list .navigation-list-item .link {
 }
 .navigation-list .navigation-list-item .link.current {
     border: 2px solid var(--color-scheme-text-link-colour);
-    padding: 5px 20px;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+@media only screen and (max-width: 1025px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mobile-menu-button {
+        position: absolute;
+        top: 37px;
+        right: 30px;
+        display: block;
+        width: 40px;
+        z-index: 2222;
+    }
+    .mobile-menu-button span {
+        display: block;
+        height: 5px;
+        background-color: var(--color-scheme-text-link-colour);
+        margin: 8px 0;
+    }
+    header nav {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1111;
+        background-color: var(--color-scheme-background);
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transition: 300ms all ease;
+        -webkit-transition: 300ms all ease;
+        -moz-transition: 300ms all ease;
+        -ms-transition: 300ms all ease;
+        -o-transition: 300ms all ease;
+    }
+    header nav.active {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transition: 300ms all ease;
+        -webkit-transition: 300ms all ease;
+        -moz-transition: 300ms all ease;
+        -ms-transition: 300ms all ease;
+        -o-transition: 300ms all ease;
+    }
+    header .navigation-list {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    header .navigation-list .navigation-list-item {
+        margin: calc(1px + 1vh) auto;
+    }
+    header .navigation-list .navigation-list-item .link{
+        font-size: calc(1rem + 5vw);
+        line-height: calc(1.4rem + 6vw);
+        padding: 10px 32px 16px;
+    }
 }
