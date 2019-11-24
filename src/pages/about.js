@@ -22,7 +22,7 @@ const AboutPage = () => {
     return (
         <Layout>
             <SEO title={site.siteMetadata.author} description={site.siteMetadata.description} />            
-            <div class={LayoutStyles.container}>
+            <div className={LayoutStyles.container}>
                 <section className={LayoutStyles.aboutSection}>
                     <div className={LayoutStyles.aboutSectionWrapper}>
                         <div className={LayoutStyles.aboutSectionInnerWrapper}>

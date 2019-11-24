@@ -38,7 +38,7 @@ const HomePage = () => {
     return (
         <Layout>
             <SEO title={site.siteMetadata.author} description={site.siteMetadata.description} />            
-            <div class={LayoutStyles.container}>
+            <div className={LayoutStyles.container}>
                 <section className={LayoutStyles.topSection}>
                     <div className={LayoutStyles.introSection+ " " +LayoutStyles.leftSection}>
                         <div className={LayoutStyles.introSectionWrapper}>
@@ -64,7 +64,7 @@ const HomePage = () => {
                                     <ul className={LayoutStyles.portfolio}>
                                         { allContentfulProjectItem.edges.map((edge) => {
                                             return (
-                                                <li className={LayoutStyles.portfolioItem}>
+                                                <li key={edge.toString()} className={LayoutStyles.portfolioItem}>
                                                     <Link to={`/projects/${edge.node.slug}`} className={LayoutStyles.link}><h3>{ edge.node.title }</h3></Link>
                                                     <h4>{ edge.node.role }</h4>
                                                 </li>

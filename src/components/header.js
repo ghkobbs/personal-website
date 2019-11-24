@@ -2,7 +2,33 @@ import React from 'react'
 import HeaderStyles from '../components/header.module.scss'
 import { Link } from 'gatsby'
 
+let state = {isToggleOn: false};
+
 const Header = () => {
+
+    const handleClick = () => {
+        
+        if (state.isToggleOn){
+
+            let b = document.getElementsByTagName('nav')
+            b[0].classList.toggle(HeaderStyles.active)
+
+            state = {
+                isToggleOn: !state.isToggleOn
+            };
+
+        } else {
+            let b = document.getElementsByTagName('nav')
+            b[0].classList.toggle(HeaderStyles.active)
+
+            state = {
+                isToggleOn: !state.isToggleOn
+            };
+        }
+
+        return
+    }
+    
     return (
         <header>
             <div className={HeaderStyles.container}>
@@ -15,7 +41,12 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <nav className={HeaderStyles.nav} >
+                <div className={HeaderStyles.mobileMenuButton} onClick={handleClick}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav className="">
                     <ul className={HeaderStyles.navigationList}>
                         <li className={HeaderStyles.navigationListItem}>
                             <Link className={HeaderStyles.link} activeClassName={HeaderStyles.current} to="/">Home</Link>
