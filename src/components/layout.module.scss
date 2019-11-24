@@ -2,11 +2,12 @@
 /* ------ Colours ------ */
 :root {
     --color-scheme-primary: #FFFFFF;
-    --color-scheme-background: #FFFFFF;
+    --color-scheme-background: #f9f9f9;
     --color-scheme-background-alt: #d9daf6;
     --color-scheme-laptop-bezel: #b9bbdc;
     --color-scheme-project-images-item: #d9daf6;
     --color-scheme-project-images-item-alt: #b9bbdc;
+    --color-scheme-footer-border: #d9daf6;
     --color-scheme-text-color: #0E141F;
     --color-scheme-text-alt-colour: #242F42;
     --color-scheme-text-link-colour: #242F42;
@@ -19,11 +20,12 @@
 @media (prefers-color-scheme: light) {
     :root {
         --color-scheme-primary: #FFFFFF;
-        --color-scheme-background: #FFFFFF;
+        --color-scheme-background: #f9f9f9;
         --color-scheme-background-alt: #d9daf6;
         --color-scheme-laptop-bezel: #b9bbdc;
         --color-scheme-project-images-item: #d9daf6;
         --color-scheme-project-images-item-alt: #b9bbdc;
+        --color-scheme-footer-border: #d9daf6;
         --color-scheme-text-color: #0E141F;
         --color-scheme-text-alt-colour: #242F42;
         --color-scheme-text-link-colour: #0452b9;
@@ -41,6 +43,7 @@
         --color-scheme-laptop-bezel: #1c2c48;
         --color-scheme-project-images-item: #111927;
         --color-scheme-project-images-item-alt: #1c2c48;
+        --color-scheme-footer-border: #1c2c48;
         --color-scheme-text-color: #f7f7f7;
         --color-scheme-text-alt-colour: #a89e8a;
         --color-scheme-text-link-colour: #FFCB36;
@@ -1021,6 +1024,7 @@ pre tt:after {
 .footer {
     margin-top: 50px;
     padding: 25px 0;
+    border-top: 1px solid var(--color-scheme-footer-border)
 }
 .footer .footer-wrapper {
     text-align: center;

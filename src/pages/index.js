@@ -21,7 +21,8 @@ const HomePage = () => {
                 sort: {
                     fields: publishedDate,
                     order: DESC
-                }
+                },
+                limit: 5
             ) {
                 edges {
                     node {
@@ -42,7 +43,7 @@ const HomePage = () => {
                     <div className={LayoutStyles.introSection+ " " +LayoutStyles.leftSection}>
                         <div className={LayoutStyles.introSectionWrapper}>
                             <div className={LayoutStyles.introSectionInnerWrapper}>
-                                <p><span className={LayoutStyles.greeting}>Hello!</span> I am Maxwell, a full-stack web developer based in Accra, Ghana. I enjoy creating clean and user-friendly website using latest treads and modern solutions.</p>
+                                <p><span className={LayoutStyles.greeting}>Hello!</span> I am Maxwell, a full-stack web developer based in Accra, Ghana. I enjoy creating a clean and user-friendly website using the latest trends and modern solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -59,7 +60,7 @@ const HomePage = () => {
                         <div className={LayoutStyles.middleSectionInnerWrapper}>
                             <div className={LayoutStyles.portfolioWrapper}>
                                 <div className={LayoutStyles.portfolioInnerWrapper}>
-                                    <h3 className={LayoutStyles.middleSectionTitle}>Featured</h3>
+                                    <h3 className={LayoutStyles.middleSectionTitle}>Works</h3>
                                     <ul className={LayoutStyles.portfolio}>
                                         { allContentfulProjectItem.edges.map((edge) => {
                                             return (
