@@ -1151,8 +1151,15 @@ pre tt:after {
         left: -10px;
     }
     .stacks .stacks-item {
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
+    }
+    .project-summary-section-wrapper {
+        padding: 0px;
+    }
+    .project-summary-content p {
+        font-size: calc(0.7rem + 1vw);
+        line-height: calc(1.2rem + 1vw);
     }
     .featured-image {
         border-top-left-radius: 15px;
