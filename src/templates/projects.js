@@ -50,7 +50,7 @@ const Project = (props) => {
 						<div className="top-main-section-wrapper">
 							<div className={LayoutStyles.topMainSectionInnerWrapper}>
 								<h1 className={LayoutStyles.projectMainTitle}>{props.data.contentfulProjectItem.title}</h1>
-								<p className={LayoutStyles.projectTagLine}>{props.data.contentfulProjectItem.title}</p>
+								<p className={LayoutStyles.projectTagLine}>{props.data.contentfulProjectItem.tagline}</p>
 							</div>
 						</div>
 					</div>
@@ -73,9 +73,9 @@ const Project = (props) => {
 							</div>
 							<div className={[LayoutStyles.projectSummaryContent+" "+LayoutStyles.projectSummaryRightContent]}>
 								<h2 className={LayoutStyles.projectSubtitle}>Role</h2>
-								<p>Design & Development</p>	
+								<p>{props.data.contentfulProjectItem.role}</p>	
 								<h2 className={LayoutStyles.projectSubtitleAlt}>Client</h2>
-								<p>vTechnology</p>	
+								<p>{props.data.contentfulProjectItem.client}</p>	
 							</div>
 						</div>
 					</div>
