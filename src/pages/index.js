@@ -4,10 +4,11 @@ import SEO from "../components/seo"
 import LayoutStyles from '../components/layout.module.scss'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
-import { profile, nodejs, css3, js, php, mongodb, git, express } from '../images/'
+// import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { nodejs, css3, js, php, mongodb, git, express } from '../images/'
 
 const HomePage = () => {
-    const { site, allContentfulProjectItem } = useStaticQuery(
+    const { site, allContentfulProjectItem, contentfulHomePage } = useStaticQuery(
         graphql`
         query {
             site {
@@ -22,7 +23,7 @@ const HomePage = () => {
                     fields: publishedDate,
                     order: DESC
                 },
-                limit: 5
+                limit: 3
             ) {
                 edges {
                     node {
@@ -30,6 +31,18 @@ const HomePage = () => {
                         slug
                         role
                     }
+                }
+            },
+            contentfulHomePage {
+                profile {
+                    title
+                    file {
+                        url
+                    }
+                }
+                greeting
+                introduction {
+                    json
                 }
             }
         }
@@ -43,14 +56,14 @@ const HomePage = () => {
                     <div className={LayoutStyles.introSection+ " " +LayoutStyles.leftSection}>
                         <div className={LayoutStyles.introSectionWrapper}>
                             <div className={LayoutStyles.introSectionInnerWrapper}>
-                                <p><span className={LayoutStyles.greeting}>Hello!</span> I am Maxwell, a full-stack web developer based in Accra, Ghana. I enjoy creating a clean and user-friendly website using the latest trends and modern solutions.</p>
+                                <p><span className={LayoutStyles.greeting}>{contentfulHomePage.greeting}</span> {contentfulHomePage.introduction.json.content[0].content[0].value}</p>
                             </div>
                         </div>
                     </div>
                     <div className={LayoutStyles.introSection+ " " +LayoutStyles.rightSection}>
                         <div className={LayoutStyles.introSectionWrapper}>
                             <div className={LayoutStyles.introSectionInnerWrapper}>
-                                <img src={profile} alt={site.siteMetadata.author}/>
+                                <img src={contentfulHomePage.profile.file.url} alt={contentfulHomePage.profile.title}/>
                             </div>
                         </div>
                     </div>
@@ -64,7 +77,7 @@ const HomePage = () => {
                                     <ul className={LayoutStyles.portfolio}>
                                         { allContentfulProjectItem.edges.map((edge) => {
                                             return (
-                                                <li key={edge.toString()} className={LayoutStyles.portfolioItem}>
+                                                <li key={edge.node.slug.toString()} className={LayoutStyles.portfolioItem}>
                                                     <Link to={`/projects/${edge.node.slug}`} className={LayoutStyles.link}><h3>{ edge.node.title }</h3></Link>
                                                     <h4>{ edge.node.role }</h4>
                                                 </li>
