@@ -1,6 +1,6 @@
-export const profile = require('./profile.jpg');
-export const profilepic = require('./profile.png');
-export const about = require('./about.jpg');
+// export const profile = require('./profile.jpg');
+// export const profilepic = require('./profile.png');
+// export const about = require('./about.jpg');
 export const nodejs = require('./nodejs.svg');
 export const css3 = require('./css3.svg');
 export const express = require('./express.svg');
