@@ -89,7 +89,7 @@ header .navigation-list .navigation-list-item .link {
 }
 @media only screen and (max-width: 600px) {
     .mobile-menu-button {
-        position: absolute;
+        position: fixed;
         top: 29px;
         right: 30px;
         display: block;
@@ -103,6 +103,7 @@ header .navigation-list .navigation-list-item .link {
         margin: 8px 0;
     }
     header .site-logo {
+        position: fixed;
         width: 47px;
         height: 47px;
     }
@@ -111,18 +112,15 @@ header .navigation-list .navigation-list-item .link {
     }
     header nav {
         display: flex;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         z-index: 1111;
         background-color: var(--color-scheme-background);
-        transform: scale(0);
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0);
+        height: 0;
+        overflow: hidden;
         transition: 300ms all ease;
         -webkit-transition: 300ms all ease;
         -moz-transition: 300ms all ease;
@@ -130,11 +128,7 @@ header .navigation-list .navigation-list-item .link {
         -o-transition: 300ms all ease;
     }
     header nav.active {
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
+        height: 100vh;
         transition: 300ms all ease;
         -webkit-transition: 300ms all ease;
         -moz-transition: 300ms all ease;
@@ -145,13 +139,14 @@ header .navigation-list .navigation-list-item .link {
         display: block;
         width: 100%;
         margin: auto;
+        opacity: 0;
     }
     header .navigation-list .navigation-list-item {
-        margin: calc(1px + 1vh) auto;
+        margin: calc(1px + 3vh) auto;
     }
     header .navigation-list .navigation-list-item .link{
         font-size: calc(1rem + 5vw);
         line-height: calc(1.4rem + 6vw);
-        padding: 10px 32px 16px;
+        padding: 0px 32px 6px;
     }
 }
