@@ -88,7 +88,7 @@ const HomePage = () => {
                             </div>
                             <div className={LayoutStyles.stacksWrapper}>
                                 <div className={LayoutStyles.stacksInnerWrapper}>
-                                    <h3 className={LayoutStyles.middleSectionTitle}>Stacks</h3>
+                                    <h3 className={LayoutStyles.middleSectionTitle}>Tech Stacks</h3>
                                     <ul className={LayoutStyles.stacks}>
                                         <li className={LayoutStyles.stacksItem}>
                                             <img src={nodejs} alt="Nodejs" />
