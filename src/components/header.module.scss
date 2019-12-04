@@ -113,32 +113,29 @@ header .navigation-list .navigation-list-item .link {
         display: flex;
         position: fixed;
         top: 0;
-        right: 0;
         bottom: 0;
-        left: 0;
+        left: -600px;
         z-index: 1111;
         background-color: var(--color-scheme-background);
-        height: 0;
-        overflow: hidden;
-        transition: 300ms all ease;
-        -webkit-transition: 300ms all ease;
-        -moz-transition: 300ms all ease;
-        -ms-transition: 300ms all ease;
-        -o-transition: 300ms all ease;
-    }
+        transition: 1s all ease;
+        -webkit-transition: 1s all ease;
+        -moz-transition: 1s all ease;
+        -ms-transition: 1s all ease;
+        -o-transition: 1s all ease;
+}
     header nav.active {
-        height: 100vh;
+        left: 0;
+        right: 0;
         transition: 300ms all ease;
         -webkit-transition: 300ms all ease;
         -moz-transition: 300ms all ease;
         -ms-transition: 300ms all ease;
         -o-transition: 300ms all ease;
-    }
+}
     header .navigation-list {
         display: block;
         width: 100%;
         margin: auto;
-        opacity: 0;
     }
     header .navigation-list .navigation-list-item {
         margin: calc(1px + 3vh) auto;

@@ -8,33 +8,26 @@ const Header = () => {
 
     const handleClick = () => {
         
-        if (state.isToggleOn){
+        if (state.isToggleOn) {
+
+            let body = document.getElementsByTagName('body')
+            body[0].style.position = ''
+            body[0].style.width = ''
 
             let b = document.getElementsByTagName('nav')
             b[0].classList.toggle(HeaderStyles.active)
 
             state = {
                 isToggleOn: !state.isToggleOn
-            };
-
-            let body = document.getElementsByTagName('body')
-            body[0].style.position = ''
-            body[0].style.width = ''
-            let c = document.getElementsByClassName(HeaderStyles.navigationList)
-            c[0].style.opacity = 0;
+            };          
 
         } else {
-            let c = document.getElementsByClassName(HeaderStyles.navigationList)
-            setTimeout(() => {
-                c[0].style.opacity = 1;
-            }, 500);
-            
-            let b = document.getElementsByTagName('nav')
-            b[0].classList.toggle(HeaderStyles.active)
-            
             let body = document.getElementsByTagName('body')
             body[0].style.position = 'fixed'
             body[0].style.width = '100%'
+            
+            let b = document.getElementsByTagName('nav')
+            b[0].classList.toggle(HeaderStyles.active)
 
             state = {
                 isToggleOn: !state.isToggleOn
