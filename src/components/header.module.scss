@@ -89,7 +89,7 @@ header .navigation-list .navigation-list-item .link {
 }
 @media only screen and (max-width: 600px) {
     .mobile-menu-button {
-        position: fixed;
+        position: absolute;
         top: 29px;
         right: 30px;
         display: block;
@@ -103,7 +103,6 @@ header .navigation-list .navigation-list-item .link {
         margin: 8px 0;
     }
     header .site-logo {
-        position: fixed;
         width: 47px;
         height: 47px;
     }
@@ -148,5 +147,5 @@ header .navigation-list .navigation-list-item .link {
         font-size: calc(1rem + 5vw);
         line-height: calc(1.4rem + 6vw);
         padding: 0px 32px 6px;
-    }
+     }
 }
