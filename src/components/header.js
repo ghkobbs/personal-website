@@ -10,9 +10,9 @@ const Header = () => {
         
         if (state.isToggleOn) {
 
-            let body = document.getElementsByTagName('body')
-            body[0].style.position = ''
-            body[0].style.width = ''
+            // let body = document.getElementsByTagName('body')
+            // body[0].style.position = ''
+            // body[0].style.width = ''
 
             let b = document.getElementsByTagName('nav')
             b[0].classList.toggle(HeaderStyles.active)
@@ -22,9 +22,9 @@ const Header = () => {
             };          
 
         } else {
-            let body = document.getElementsByTagName('body')
-            body[0].style.position = 'fixed'
-            body[0].style.width = '100%'
+            // let body = document.getElementsByTagName('body')
+            // body[0].style.position = 'fixed'
+            // body[0].style.width = '100%'
             
             let b = document.getElementsByTagName('nav')
             b[0].classList.toggle(HeaderStyles.active)
