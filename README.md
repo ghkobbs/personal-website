@@ -25,16 +25,16 @@ There's a free basic plan option with features which are sufficient for this pro
 3. Click on the `Try for free` button and complete and submit the sign up form.
 4. Click Explore content modeling under `I create content`.
 
-### Getting started with contentful
+## Getting started with contentful
 
-## Create new space
+### Create new space
 
 1. Click the hamburger menu to open the sidebar and click on `+ create space`.
 2. Choose the `Free` space type.
 3. Enter any name for your space and click `Proceed to confirmation`.
 4. Click `Confirm and create space` on the next modal screen.
 
-## Create content models
+### Create content models
 
 This is where we define the content model(e.g form fields) for the website. There will be a total 4 models namely About, Home Page, Project Item and Social Icon.
 
@@ -108,7 +108,7 @@ For the app to work fully without any errors there have to be at least one entry
 
 Note: Repeat steps to add entries to each content model type. Each model must have at least one content before starting the up.
   
-### Add environment variables
+## Add environment variables
 
 Inside your contentful dashboard:
 1. click on `settings` located at the top of the page and select API Keys.
