@@ -44,59 +44,59 @@ This is where we define the content model(e.g form fields) for the website. Ther
 
 ### a. About
 
-**Content Type Info**
-**Name**: About
-**Api Identifier**: about
+**Content Type Info**  
+**Name**: About  
+**Api Identifier**: about  
 
 1. Click on `Create` button to be taken to the next page.
-2. Click on `Add field` located on the right. Repeat this step to create all the fields below.
-a. Add a `Text` field type and enter `Title` as the name and click on `Create`.
-b. Add a `Text` field type and enter `About Image` as the name and click on `Create`.
-c. Add a `Rich Text` field type and enter `About Text` as the name and click on `Create`.
+2. Click on `Add field` located on the right. Repeat this step to create all the fields below.  
+a. Add a `Text` field type and enter `Title` as the name and click on `Create`.  
+b. Add a `Text` field type and enter `About Image` as the name and click on `Create`.  
+c. Add a `Rich Text` field type and enter `About Text` as the name and click on `Create`.  
 
 ### b. Home Page
 
-**Content Type Info**
-**Name**: Home Page
-**Api Identifier**: homePage
+**Content Type Info**  
+**Name**: Home Page  
+**Api Identifier**: homePage  
 
 1. Click on `Create` button to be taken to the next page.
-2. Click on `Add field` located on the right. Repeat this step to create all the fields below.
-a. Add a `Text` field type and enter `Title` as the name and click on `Create`.
-b. Add a `Text` field type and enter `Greating` as the name and click on `Create`.
-c. Add a `Rich Text` field type and enter `Introduction` as the name and click on `Create`.
-c. Add a `Media` field type and enter `Profile` as the name and click on `Create`.
+2. Click on `Add field` located on the right. Repeat this step to create all the fields below.  
+a. Add a `Text` field type and enter `Title` as the name and click on `Create`.  
+b. Add a `Text` field type and enter `Greating` as the name and click on `Create`.  
+c. Add a `Rich Text` field type and enter `Introduction` as the name and click on `Create`.  
+c. Add a `Media` field type and enter `Profile` as the name and click on `Create`.  
 
 ### c. Project Item
 
-**Content Type Info**
-**Name**: Project Item
-**Api Identifier**: projectItem
+**Content Type Info**  
+**Name**: Project Item  
+**Api Identifier**: projectItem  
 
 1. Click on `Create` button to be taken to the next page.
-2. Click on `Add field` located on the right. Repeat this step to create all the fields below.
-a. Add a `Media` field type and enter `Featured Image` as the name and click on `Create`.
-b. Add a `Text` field type and enter `Title` as the name and click on `Create`.
-c. Add a `Text` field type and enter `Tagline` as the name and click on `Create`.
-d. Add a `Text` field type and enter `Slug` as the name and click on `Create`.
-e. Add a `Date and Time` field type and enter `Published Date` as the name and click on `Create`.
-f. Add a `Rich Text` field type and enter `Overview` as the name and click on `Create`.
-g. Add a `Text` field type and enter `Client` as the name and click on `Create`.
-h. Add a `Text` field type and enter `Role` as the name and click on `Create`.
-i. Add a `Media` field type and enter `Desktop Images` as the name, Choose many files and click on `Create`.
-j. Add a `Media` field type and enter `Mobile Images` as the name, Choose many files and click on `Create`.
+2. Click on `Add field` located on the right. Repeat this step to create all the fields below.  
+a. Add a `Media` field type and enter `Featured Image` as the name and click on `Create`.  
+b. Add a `Text` field type and enter `Title` as the name and click on `Create`.  
+c. Add a `Text` field type and enter `Tagline` as the name and click on `Create`.  
+d. Add a `Text` field type and enter `Slug` as the name and click on `Create`.  
+e. Add a `Date and Time` field type and enter `Published Date` as the name and click on `Create`.  
+f. Add a `Rich Text` field type and enter `Overview` as the name and click on `Create`.  
+g. Add a `Text` field type and enter `Client` as the name and click on `Create`.  
+h. Add a `Text` field type and enter `Role` as the name and click on `Create`.  
+i. Add a `Media` field type and enter `Desktop Images` as the name, Choose many files and click on `Create`.  
+j. Add a `Media` field type and enter `Mobile Images` as the name, Choose many files and click on `Create`.  
 
 ### d. Social Icon
 
-**Content Type Info**
-**Name**: Social Icon
-**Api Identifier**: socialicons
+**Content Type Info**  
+**Name**: Social Icon  
+**Api Identifier**: socialicons  
 
 1. Click on `Create` button to be taken to the next page.
-2. Click on `Add field` located on the right. Repeat this step to create all the fields below.
-a. Add a `Text` field type and enter `Title` as the name and click on `Create`.
-b. Add a `Text` field type and enter `Link` as the name and click on `Create`.
-c. Add a `Media` field type and enter `Icon` as the name and click on `Create`.
+2. Click on `Add field` located on the right. Repeat this step to create all the fields below.  
+a. Add a `Text` field type and enter `Title` as the name and click on `Create`.  
+b. Add a `Text` field type and enter `Link` as the name and click on `Create`.  
+c. Add a `Media` field type and enter `Icon` as the name and click on `Create`.  
 
 ## Begin adding content
 
