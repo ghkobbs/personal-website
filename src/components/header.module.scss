@@ -117,20 +117,22 @@ header .navigation-list .navigation-list-item .link {
         left: -600px;
         z-index: 1111;
         background-color: var(--color-scheme-background);
-        transition: 1s all ease;
-        -webkit-transition: 1s all ease;
-        -moz-transition: 1s all ease;
-        -ms-transition: 1s all ease;
-        -o-transition: 1s all ease;
+        opacity: 0;
+        transition: 50ms all ease;
+        -webkit-transition: 50ms all ease;
+        -moz-transition: 50ms all ease;
+        -ms-transition: 50ms all ease;
+        -o-transition: 50ms all ease;
 }
     header nav.active {
         left: 0;
         right: 0;
-        transition: 1s all ease;
-        -webkit-transition: 1s all ease;
-        -moz-transition: 1s all ease;
-        -ms-transition: 1s all ease;
-        -o-transition: 1s all ease;
+        opacity: 1;
+        transition: 0.9s all ease;
+        -webkit-transition: 0.9s all ease;
+        -moz-transition: 0.9s all ease;
+        -ms-transition: 0.9s all ease;
+        -o-transition: 0.9s all ease;
 }
     header .navigation-list {
         display: block;

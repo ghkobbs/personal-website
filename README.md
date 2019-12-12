@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://maxmorrison.me">
-    <img alt="Ghkobbs" src="https://maxmorrison.me/static/favicon-bdae98d4426a4cdb2881ae2f5489a5d9.png" width="60" />
+    <img alt="Ghkobbs" src="https://github.com/ghkobbs/personal-website/blob/dev/src/images/favicon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
