@@ -126,11 +126,11 @@ header .navigation-list .navigation-list-item .link {
     header nav.active {
         left: 0;
         right: 0;
-        transition: 300ms all ease;
-        -webkit-transition: 300ms all ease;
-        -moz-transition: 300ms all ease;
-        -ms-transition: 300ms all ease;
-        -o-transition: 300ms all ease;
+        transition: 1s all ease;
+        -webkit-transition: 1s all ease;
+        -moz-transition: 1s all ease;
+        -ms-transition: 1s all ease;
+        -o-transition: 1s all ease;
 }
     header .navigation-list {
         display: block;
