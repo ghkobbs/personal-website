@@ -832,9 +832,6 @@ pre tt:after {
 .portfolio .portfolio-item {
     margin-bottom: 40px;
 }
-.portfolio .portfolio-item:last-child {
-    margin-bottom: 0px;
-}
 .portfolio .portfolio-item .link {
     text-decoration: none;
     display: inline-block;
@@ -1025,6 +1022,9 @@ pre tt:after {
     display: inline-block;
     vertical-align: middle;
     margin: 0 10px 0 0;
+}
+.footer .social-icons-group .social-icons:last-child {
+    margin: 0;
 }
 .footer .social-icons-group .social-icons a{
     display: inline-block;
