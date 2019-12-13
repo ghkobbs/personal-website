@@ -23,7 +23,7 @@ There's a free basic plan option with features which are sufficient for this pro
 1. Click on the Get started button
 2. Select `I BUILD SOFTWARE`
 3. Click on the `Try for free` button and complete and submit the sign up form.
-4. Click Explore content modeling under `I create content`.
+4. Click `Explore content modeling` under `I create content`.
 
 ## Getting started with contentful
 
@@ -121,10 +121,10 @@ Create `.env.development` file inside the `personal-website` folder and add the 
 GATSBY_GRAPHQL_IDE=playground
 
 # Contentfull space Id
-CONTENTFUL_SPACE_ID=`your-contentful-space-id`
+CONTENTFUL_SPACE_ID=your-contentful-space-id
 
 # Contentfull access token
-CONTENTFUL_ACCESS_TOKEN=`your-contentful-access-token`
+CONTENTFUL_ACCESS_TOKEN=your-contentful-access-token
 SITE_URL=your-website-address
 ```
 
