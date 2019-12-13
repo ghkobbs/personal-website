@@ -36,24 +36,21 @@ module.exports = {
             }
           }
       }`,
-        serialize: ({
-            site,
-            allSitePage
-          }) =>
+        serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => {
             return {
               url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: `daily`,
               priority: 0.7,
             }
-          })
-      }
+          }),
+      },
     },
     {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     "gatsby-plugin-sass",
@@ -99,6 +96,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
+        cookieDomain: process.env.SITE_URL,
       },
     },
   ],
