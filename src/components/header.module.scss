@@ -93,14 +93,25 @@ header .navigation-list .navigation-list-item .link {
         top: 29px;
         right: 30px;
         display: block;
-        width: 40px;
+        width: 55px;
         z-index: 2222;
     }
     .mobile-menu-button span {
         display: block;
         height: 5px;
         background-color: var(--color-scheme-text-link-colour);
-        margin: 8px 0;
+        margin: 15px 0;
+    }
+    .mobile-menu-button span:first-child {
+        width: 50%;
+        margin: 0 0 0 auto;
+    }
+    .mobile-menu-button span:last-child {
+        width: 50%;
+        margin-bottom: 0;
+    }
+    .header-module--mobile-menu-button--3GBLP span:last-child {
+        width: 50%;
     }
     header .site-logo {
         width: 47px;
@@ -138,7 +149,12 @@ header .navigation-list .navigation-list-item .link {
         display: block;
         width: 100%;
         margin: auto;
-    }
+        transition: 300ms all ease;
+        -webkit-transition: 300ms all ease;
+        -moz-transition: 300ms all ease;
+        -ms-transition: 300ms all ease;
+        -o-transition: 300ms all ease;
+}
     header .navigation-list .navigation-list-item {
         margin: calc(1px + 3vh) auto;
     }

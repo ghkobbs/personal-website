@@ -10,15 +10,21 @@ const Header = () => {
         
         if (state.isToggleOn) {
 
-            // let body = document.getElementsByTagName('body')
             // body[0].style.position = ''
             // body[0].style.width = ''
-
+            
+            let navlists = document.querySelector(`.${HeaderStyles.navigationList}`)
             let b = document.getElementsByTagName('nav')
-            b[0].classList.toggle(HeaderStyles.active)
+            
+            navlists.style.opacity = 0
+
+            setTimeout(() => {
+                b[0].classList.toggle(HeaderStyles.active)
+                navlists.style.opacity = ''
+            }, 300)
 
             state = {
-                isToggleOn: !state.isToggleOn
+                isToggleOn: false
             };          
 
         } else {
@@ -30,7 +36,7 @@ const Header = () => {
             b[0].classList.toggle(HeaderStyles.active)
 
             state = {
-                isToggleOn: !state.isToggleOn
+                isToggleOn: true
             };
         }
 
