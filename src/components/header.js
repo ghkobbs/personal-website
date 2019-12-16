@@ -2,14 +2,17 @@ import React from 'react'
 import HeaderStyles from '../components/header.module.scss'
 import { Link } from 'gatsby'
 
-let state = {isToggleOn: false};
-
 const Header = () => {
+
+    let state = {
+        isToggleOn: false
+    };
 
     const handleClick = () => {
         
         if (state.isToggleOn) {
-
+            
+            // let body = document.getElementsByTagName('body')
             // body[0].style.position = ''
             // body[0].style.width = ''
             
