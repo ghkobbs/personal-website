@@ -26,6 +26,9 @@ const Footer = () => {
         }
         `
     )
+
+    const copyrightYear = new Date().getFullYear();
+
     return (
         <footer className={ LayoutStyles.footer }>
             <div className={ LayoutStyles.footerWrapper } >
@@ -39,7 +42,7 @@ const Footer = () => {
                             )
                         })}
                     </ul>
-                    <p>&copy;2019 Maxwell Morrison. All rights reserved. </p>
+                    <p>&copy;2019 - {copyrightYear} Maxwell Morrison. All rights reserved. </p>
                     <small>This site is built with <OutboundLink href="https://www.gatsbyjs.org/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer">Gatsbyjs</OutboundLink> and hosted on <OutboundLink href="https://www.netlify.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer">Netlify</OutboundLink>. The source code can be found on <OutboundLink href="https://github.com/ghkobbs/personal-website" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer">Github</OutboundLink>.</small>
                 </div>
             </div>
