@@ -855,11 +855,10 @@ pre tt:after {
 }
 .stacks {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 .stacks .stacks-item {
-    width: 100px;
     height: 100px;
     padding: 15px;
     overflow: hidden;
@@ -1042,6 +1041,25 @@ pre tt:after {
     color: var(--color-scheme-text-link-colour);
     text-decoration: none;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color-scheme-background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-scheme-text-link-colour);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scheme-background-alt);
+}
 @media only screen and (max-width: 1025px) {
     .container {
         padding: 0 30px;
@@ -1181,10 +1199,6 @@ pre tt:after {
     }
     .portfolio .portfolio-item h4 {
         font-size: calc(0.5rem + 3vw);
-    }
-    .stacks .stacks-item {
-        width: 75px;
-        height: 75px;
     }
     .project-summary-content .project-subtitle,
     .project-summary-content .project-subtitle-alt {
