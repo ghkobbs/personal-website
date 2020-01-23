@@ -65,7 +65,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: contentfulHomePage.profile.file.url,
+          content: `https:${contentfulHomePage.profile.file.url}`,
         },
         {
           property: `og:image:width`,
@@ -101,7 +101,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: contentfulHomePage.profile.file.url,
+          content: `https:${contentfulHomePage.profile.file.url}`,
         },
         {
           name: `twitter:image:alt`,
