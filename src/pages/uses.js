@@ -29,7 +29,7 @@ const AboutPage = () => {
                 <section className={LayoutStyles.usesSection}>
                     <div className={LayoutStyles.usesSectionWrapper}>
                         <div className={LayoutStyles.usesSectionInnerWrapper}>
-                            <p>Since all the cool kids in the community are revealing what they use, I feel it's time I do the same even though no one has ever asked me about what I use  in my day to day activities. This will nonetheless serve as a good reference for when I have to  set up a new environment.</p>
+                            <p>Since many in the community are revealing what they use, I feel it's time I do the same even though no one has ever asked me about what I use  in my day to day activities. This will nonetheless serve as a good reference for when I have to  set up a new environment.</p>
                             <h1>Development</h1>
                             <table>
                                 <tbody>
@@ -97,7 +97,7 @@ const AboutPage = () => {
                                     </tr>
                                     <tr>
                                         <td>Password Manager</td>
-                                        <td><OutboundLink href="https://bitwarden.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Bitwarden.</OutboundLink> Using this has been great so far comapared to the others I've tried.</td>
+                                        <td><OutboundLink href="https://bitwarden.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Bitwarden.</OutboundLink> Using this has been great so far compared to the others I've tried.</td>
                                     </tr>
                                     <tr>
                                         <td>Notes & To-do</td>
