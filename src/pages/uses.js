@@ -9,7 +9,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 // import { about } from '../images/index';
 
 const AboutPage = () => {
-    const { site, contentfulAbout } = useStaticQuery(
+    const { site } = useStaticQuery(
         graphql`
         query {
             site {
@@ -55,6 +55,10 @@ const AboutPage = () => {
                             <table>
                                 <tbody>
                                     <tr>
+                                        <td>Code Repo</td>
+                                        <td><OutboundLink href="http://github.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Github.</OutboundLink> Migrated all my bitbucket repos to github since making private repos free</td>
+                                    </tr>                                  
+                                    <tr>
                                         <td>File Storage</td>
                                         <td><OutboundLink href="https://drive.google.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Google Drive</OutboundLink>, <OutboundLink href="https://onedrive.live.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">One Drive</OutboundLink></td>
                                     </tr>
@@ -79,6 +83,14 @@ const AboutPage = () => {
                             <h1>Desktop Apps</h1>
                             <table>
                                 <tbody>
+                                    <tr>
+                                        <td>APIs</td>
+                                        <td><OutboundLink href="https://www.getpostman.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Postman.</OutboundLink> Test and debug API endpoints and responses.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Desgin</td>
+                                        <td><OutboundLink href="https://www.adobe.com/products/xd.html" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Adobe Xd.</OutboundLink> Used for project layout designs and occasional instagram posts.</td>
+                                    </tr>
                                     <tr>
                                         <td>Communication</td>
                                         <td><OutboundLink href="https://slack.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Slack</OutboundLink>, <OutboundLink href="https://discordapp.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Discord.</OutboundLink></td>
