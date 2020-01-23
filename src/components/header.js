@@ -75,6 +75,9 @@ const Header = () => {
                             <Link className={HeaderStyles.link} activeClassName={HeaderStyles.current} to="/work">Work</Link>
                         </li>
                         <li className={HeaderStyles.navigationListItem}>
+                            <Link className={HeaderStyles.link} activeClassName={HeaderStyles.current} to="/uses">Uses</Link>
+                        </li>
+                        <li className={HeaderStyles.navigationListItem}>
                             <a href="mailto:maxkobbs@gmail.com" className={HeaderStyles.link}>Contact</a>
                         </li>
                     </ul>
