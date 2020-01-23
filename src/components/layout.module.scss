@@ -23,6 +23,7 @@
         --color-scheme-background: #f9f9f9;
         --color-scheme-background-alt: #d9daf6;
         --color-scheme-laptop-bezel: #b9bbdc;
+        --color-scheme-uses-border: #35548e;
         --color-scheme-project-images-item: #d9daf6;
         --color-scheme-project-images-item-alt: #b9bbdc;
         --color-scheme-footer-border: #d9daf6;
@@ -41,6 +42,7 @@
         --color-scheme-background: #0E141F;
         --color-scheme-background-alt: #111927;
         --color-scheme-laptop-bezel: #1c2c48;
+        --color-scheme-uses-border: #35548e;
         --color-scheme-project-images-item: #111927;
         --color-scheme-project-images-item-alt: #1c2c48;
         --color-scheme-footer-border: #1c2c48;
@@ -1003,6 +1005,30 @@ pre tt:after {
 .about-text-wrapper .about-text-inner-wrapper p {
     font-weight: lighter;
 }
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper h1 {
+    font-size: calc(100% + 2vw);
+}
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper table tbody {
+    margin-bottom: 50px;
+    display: block;
+}
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper {
+    padding-top: 50px;
+    width: 800px;
+    max-width: 100%;
+}   
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper table tr td {
+    border-bottom: 1px solid var(--color-scheme-uses-border);
+    padding: 25px 25px 25px 0;
+}
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper table td {
+    font-family: 'Alata', sans-serif;
+    font-size: 1.2rem;
+}
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper .link {
+    color: var(--color-scheme-text-link-colour);
+    text-decoration: none;
+}
 .footer {
     margin-top: 50px;
     padding: 25px 0;
@@ -1054,6 +1080,7 @@ pre tt:after {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--color-scheme-text-link-colour);
+    border-radius: 5px;
 }
 
 /* Handle on hover */
