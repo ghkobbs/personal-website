@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, contentfulHomePage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -11,6 +11,16 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            creator
+            siteUrl
+          }
+        },
+        contentfulHomePage {
+          profile {
+              title
+              file {
+                  url
+              }
           }
         }
       }
@@ -31,7 +41,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.author,
         },
         {
           property: `og:description`,
@@ -42,16 +52,60 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:site_name`,
+          content: site.siteMetadata.author,
+        },
+        {
+          property: `og:locale`,
+          content: 'en_US',
+        },
+        {
+          property: `og:image:type`,
+          content: 'image/jpg',
+        },
+        {
+          property: `og:image`,
+          content: contentfulHomePage.profile.file.url,
+        },
+        {
+          property: `og:image:width`,
+          content: '250',
+        },
+        {
+          property: `og:image:height`,
+          content: '300',
+        },
+        {
+          property: `og:image:alt`,
+          content: site.siteMetadata.author,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
+          name: `twitter:site`,
+          content: site.siteMetadata.creator,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.creator,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:image`,
+          content: contentfulHomePage.profile.file.url,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:description`,

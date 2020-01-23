@@ -9,6 +9,7 @@ module.exports = {
     title: `Full-stack Developer`,
     description: `Freelance full stack Web Developer and Designer. I am available for freelance and remote contract jobs. You can reach me at maxkobbs@gmail.com`,
     author: `Maxwell Morrison`,
+    creator: `@ghkobbs`,
     siteUrl: process.env.SITE_URL,
   },
   plugins: [
