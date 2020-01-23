@@ -1005,6 +1005,9 @@ pre tt:after {
 .about-text-wrapper .about-text-inner-wrapper p {
     font-weight: lighter;
 }
+.uses-section .uses-section-wrapper .uses-section-inner-wrapper p {
+    padding-bottom: 50px;
+}
 .uses-section .uses-section-wrapper .uses-section-inner-wrapper h1 {
     font-size: calc(100% + 2vw);
 }
