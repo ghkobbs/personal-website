@@ -138,7 +138,7 @@ const AboutPage = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>I hope you this found this interesting. Visit <OutboundLink href="https://uses.tech" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">https://uses.tech</OutboundLink> to check out other awesome uses.</p>
+                            <p>I hope you found this interesting. Visit <OutboundLink href="https://uses.tech" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">https://uses.tech</OutboundLink> to check out other awesome uses.</p>
                         </div>
                     </div>
                 </section>
