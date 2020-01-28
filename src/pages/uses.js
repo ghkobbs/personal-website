@@ -88,8 +88,8 @@ const AboutPage = () => {
                                         <td><OutboundLink href="https://www.getpostman.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Postman.</OutboundLink> Test and debug API endpoints and responses.</td>
                                     </tr>
                                     <tr>
-                                        <td>Desgin</td>
-                                        <td><OutboundLink href="https://www.adobe.com/products/xd.html" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Adobe Xd.</OutboundLink> Used for project layout designs and occasional instagram posts.</td>
+                                        <td>Design</td>
+                                        <td><OutboundLink href="https://www.adobe.com/products/xd.html" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Adobe Xd.</OutboundLink> Used for my project layout designs and occasional instagram posts.</td>
                                     </tr>
                                     <tr>
                                         <td>Communication</td>
@@ -97,7 +97,7 @@ const AboutPage = () => {
                                     </tr>
                                     <tr>
                                         <td>Email</td>
-                                        <td><OutboundLink href="https://missiveapp.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Missive.</OutboundLink> Incredibly powerful tools to manage your emails.</td>
+                                        <td><OutboundLink href="https://missiveapp.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Missive.</OutboundLink> Comes with Incredibly powerful tools to manage emails.</td>
                                     </tr>
                                     <tr>
                                         <td>Browser</td>
@@ -105,15 +105,15 @@ const AboutPage = () => {
                                     </tr>
                                     <tr>
                                         <td>VPN (For Custom Connections)</td>
-                                        <td><OutboundLink href="https://www.sparklabs.com/viscosity/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Viscosity</OutboundLink></td>
+                                        <td><OutboundLink href="https://www.sparklabs.com/viscosity/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Viscosity</OutboundLink> Secure remote connection to workplace networks.</td>
                                     </tr>
                                     <tr>
                                         <td>Password Manager</td>
-                                        <td><OutboundLink href="https://bitwarden.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Bitwarden.</OutboundLink> Using this has been great so far compared to the others I've tried.</td>
+                                        <td><OutboundLink href="https://bitwarden.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Bitwarden.</OutboundLink> Securely stores my password and sync them across all my devices. Oh and its free.</td>
                                     </tr>
                                     <tr>
                                         <td>Notes & To-do</td>
-                                        <td><OutboundLink href="https://www.notion.so/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Notion.</OutboundLink>, <OutboundLink href="https://todoist.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Todoist.</OutboundLink></td>
+                                        <td><OutboundLink href="https://www.notion.so/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Notion</OutboundLink>, <OutboundLink href="https://todoist.com/" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">Todoist</OutboundLink></td>
                                     </tr>
                                     <tr>
                                         <td>Project Management</td>
@@ -138,7 +138,7 @@ const AboutPage = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>Found this interesting and wants to see more like it? Visit <OutboundLink href="https://uses.tech" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">https://uses.tech</OutboundLink> to find other awesome uses.</p>
+                            <p>I hope you this found this interesting. Visit <OutboundLink href="https://uses.tech" className={LayoutStyles.link} target="_blank" rel="noopener noreferrer" title="title">https://uses.tech</OutboundLink> to check out other awesome uses.</p>
                         </div>
                     </div>
                 </section>
