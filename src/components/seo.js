@@ -40,6 +40,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `keywords`,
+          content: "Maxwell Morrison, ghkobbs, maxkobbs, developer, javascript, software engineer, frontend developer, backend developer, web developer, front-end developer, back-end developer, web developer in accra",
+        },
+        {
           property: `og:title`,
           content: site.siteMetadata.author,
         },
