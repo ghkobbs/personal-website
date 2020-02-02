@@ -4,10 +4,16 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '../components/layout'
 import SEO from "../components/seo"
+import Helmet from "react-helmet"
 import LayoutStyles from "../components/layout.module.scss"
 
 export const query = graphql`
 	query($slug: String!) {
+		site{
+			siteMetadata {
+			  siteUrl
+			}
+		},
 		contentfulProjectItem(slug: { eq: $slug }) {
 			featuredImage {
 				title
@@ -36,14 +42,17 @@ export const query = graphql`
 			overview {
                json
 			}
-		}
+		},		
 	}
 `
 
 const Project = (props) => {
     return (
         <Layout>
-			<SEO title={props.data.contentfulProjectItem.title} description={props.data.contentfulProjectItem.tagline} />            
+			<SEO title={props.data.contentfulProjectItem.title} description={props.data.contentfulProjectItem.tagline} />   
+			<Helmet>
+				<link rel="canonical" href={props.data.site.siteMetadata.siteUrl +"/projects/"+props.data.contentfulProjectItem.slug} />
+			</Helmet>         
 			<div className={LayoutStyles.featuredImageSection}>
 				<div className={LayoutStyles.container}>
 					<div className="top-main-section">
