@@ -55,8 +55,8 @@ const Layout = (props) => {
     useEffect(() => {
         window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
         window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
-        // setTheme()
     })
+    setTheme()
 
     return (
         <div>
