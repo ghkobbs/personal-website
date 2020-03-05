@@ -55,17 +55,8 @@ const Layout = (props) => {
     useEffect(() => {
         window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
         window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
-        // setTheme()
+        setTheme()
     })
-
-    let localStorageTheme = localStorage.getItem('theme');
-
-    if(localStorageTheme === 'dark') {
-        state.theme = Styles.dark
-    } else {
-        state.theme = Styles.light
-    }
-    document.body.classList.add(state.theme)
 
     return (
         <div>
