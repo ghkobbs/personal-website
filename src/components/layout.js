@@ -19,7 +19,15 @@ const Layout = (props) => {
 
         body.classList.remove(state.theme)
 
-        if(localStorageTheme === 'dark') {
+        if( localStorageTheme !== null) {
+            if(localStorageTheme === 'dark') {
+                state.theme = Styles.dark
+                themeToggleDiv.classList.add(Styles.themeToggleActive)
+            } else {
+                state.theme = Styles.light
+                themeToggleDiv.classList.remove(Styles.themeToggleActive)
+            }
+        } else if ( window.matchMedia("(prefers-color-scheme: dark)").matches ) {
             state.theme = Styles.dark
             themeToggleDiv.classList.add(Styles.themeToggleActive)
         } else {
