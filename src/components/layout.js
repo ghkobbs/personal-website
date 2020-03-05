@@ -73,7 +73,7 @@ const Layout = (props) => {
                     </div>
                 </div>
             </div>
-            <div className={Styles.themeToggle} aria-label="Switch between Dark and Light mode" onLoad={setTheme} onClick={changeTheme} role="button">
+            <div className={Styles.themeToggle} aria-label="Switch between Dark and Light mode" onLoad={() => setTheme()} onClick={changeTheme} role="button">
                 <div className={Styles.themeToggleTrack}>
                     <div className={Styles.themeToggleTrackCheck}>
                         <img src={sun} width="20" height="20" role="presentation" style={{pointerEvents: 'none'}} alt="Sun"/>
