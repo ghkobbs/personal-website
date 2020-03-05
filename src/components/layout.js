@@ -56,8 +56,20 @@ const Layout = (props) => {
         window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
         window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
     })
-
+    
+    let localStorageTheme = localStorage.getItem('theme');
     let body = document.getElementsByTagName('body')[0];
+    let themeToggleDiv = document.querySelector(`.${Styles.themeToggle}`);
+
+    body.classList.remove(state.theme)
+
+    if(localStorageTheme === 'dark') {
+        state.theme = Styles.dark
+        themeToggleDiv.classList.add(Styles.themeToggleActive)
+    } else {
+        state.theme = Styles.light
+        themeToggleDiv.classList.remove(Styles.themeToggleActive)
+    }
     body.classList.add(state.theme)
 
     return (
