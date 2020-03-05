@@ -56,7 +56,9 @@ const Layout = (props) => {
         window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
         window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
     })
-    setTheme()
+
+    let body = document.getElementsByTagName('body')[0];
+    body.classList.add(state.theme)
 
     return (
         <div>
