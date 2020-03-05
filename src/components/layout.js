@@ -12,7 +12,7 @@ const Layout = (props) => {
         theme: Styles.light
     }
     
-    function setTheme() {
+    const setTheme = () => {
         let localStorageTheme = localStorage.getItem('theme');
         let body = document.getElementsByTagName('body')[0];
         let themeToggleDiv = document.querySelector(`.${Styles.themeToggle}`);
