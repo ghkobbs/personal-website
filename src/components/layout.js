@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "../components/layout.module.scss"
 import Styles from "../components/layout.module.scss"
 import Header from '../components/header'
@@ -7,6 +7,7 @@ import Helmet from "react-helmet"
 import {favicon, sun, moon} from '../images/'
 
 const Layout = (props) => {
+
     let state = {
         theme: Styles.light
     }
@@ -51,9 +52,10 @@ const Layout = (props) => {
         }
     }
 
-    
-    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
-    window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
+    useEffect(() => {
+        window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
+        window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
+    })
 
     return (
         <div>
