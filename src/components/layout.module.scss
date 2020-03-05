@@ -1,6 +1,6 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 /* ------ Colours ------ */
-:root {
+body.light {
   --color-scheme-primary: #ffffff;
   --color-scheme-background: #f9f9f9;
   --color-scheme-background-alt: #d9daf6;
@@ -16,43 +16,20 @@
   --color-scheme-image-filter: brightness(0);
 }
 
-/* ------ Night mode support ------ */
-/* Light mode */
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-scheme-primary: #ffffff;
-    --color-scheme-background: #f9f9f9;
-    --color-scheme-background-alt: #d9daf6;
-    --color-scheme-laptop-bezel: #b9bbdc;
-    --color-scheme-uses-border: #35548e;
-    --color-scheme-project-images-item: #d9daf6;
-    --color-scheme-project-images-item-alt: #b9bbdc;
-    --color-scheme-footer-border: #d9daf6;
-    --color-scheme-text-color: #0e141f;
-    --color-scheme-text-alt-colour: #242f42;
-    --color-scheme-text-link-colour: #0452b9;
-    --color-scheme-text-link-highlight-colour: #e8f0fe;
-    --color-scheme-image-filter: brightness(0);
-  }
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-scheme-primary: #0e141f;
-    --color-scheme-background: #0e141f;
-    --color-scheme-background-alt: #111927;
-    --color-scheme-laptop-bezel: #1c2c48;
-    --color-scheme-uses-border: #35548e;
-    --color-scheme-project-images-item: #111927;
-    --color-scheme-project-images-item-alt: #1c2c48;
-    --color-scheme-footer-border: #1c2c48;
-    --color-scheme-text-color: #f7f7f7;
-    --color-scheme-text-alt-colour: #a89e8a;
-    --color-scheme-text-link-colour: #ffcb36;
-    --color-scheme-text-link-highlight-colour: #ffffff;
-    --color-scheme-image-filter: initial;
-  }
+body.dark {
+  --color-scheme-primary: #0e141f;
+  --color-scheme-background: #0e141f;
+  --color-scheme-background-alt: #111927;
+  --color-scheme-laptop-bezel: #1c2c48;
+  --color-scheme-uses-border: #35548e;
+  --color-scheme-project-images-item: #111927;
+  --color-scheme-project-images-item-alt: #1c2c48;
+  --color-scheme-footer-border: #1c2c48;
+  --color-scheme-text-color: #f7f7f7;
+  --color-scheme-text-alt-colour: #a89e8a;
+  --color-scheme-text-link-colour: #ffcb36;
+  --color-scheme-text-link-highlight-colour: #ffffff;
+  --color-scheme-image-filter: initial;
 }
 
 html {
@@ -310,6 +287,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
 }
 
 img {
@@ -1097,6 +1076,37 @@ pre tt:after {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-scheme-background-alt);
 }
+.theme-toggle {
+  position: fixed;
+  right: 150px;
+  top: 53px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+.theme-toggle-track .theme-toggle-track-x {
+  display: block;
+}
+.theme-toggle-track .theme-toggle-track-check {
+  display: none;
+}
+.theme-toggle-active .theme-toggle-track .theme-toggle-track-check {
+  display: block;
+}
+.theme-toggle-active .theme-toggle-track .theme-toggle-track-x {
+  display: none;
+}
+.theme-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 @media only screen and (max-width: 1025px) {
   .container {
     padding: 0 30px;
@@ -1121,6 +1131,11 @@ pre tt:after {
   .footer .footer-wrapper {
     font-size: calc(0.5rem + 1vw);
     line-height: calc(0.5rem + 1vw);
+  }
+  .theme-toggle {
+    right: 25px;
+    top: unset;
+    bottom: 30px;
   }
 }
 @media only screen and (max-width: 768px) {

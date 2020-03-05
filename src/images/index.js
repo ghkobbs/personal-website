@@ -8,3 +8,6 @@ export const git = require('./git.svg');
 export const js = require('./javascript.svg');
 export const mongodb = require('./mongodb.svg');
 export const php = require('./php.svg');
+export const favicon = require('./favicon.png');
+export const sun = require('./sun.png');
+export const moon = require('./moon.png');
