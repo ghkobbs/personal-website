@@ -57,7 +57,7 @@ const WorkPage = () => {
 																							<li key={edge.node.slug.toString()} className={LayoutStyles.portfolioItem}>
 																									<div className={LayoutStyles.portfolioItemInnerWrapper}>
 																										<div className={LayoutStyles.portfolioItemImageContent}>
-																											<img src={edge.node.featuredImage.file.url} alt={edge.node.featuredImage.title}/>
+																											<Link to={`/projects/${edge.node.slug}`}><img src={edge.node.featuredImage.file.url} alt={edge.node.featuredImage.title}/></Link>
 																										</div>
 																										<div className={LayoutStyles.portfolioItemTextContent}>
 																											<div className={LayoutStyles.portfolioHeading}>
