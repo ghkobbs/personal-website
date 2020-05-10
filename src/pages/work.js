@@ -24,9 +24,18 @@ const WorkPage = () => {
             ) {
                 edges {
                     node {
-                        title
-                        slug
-                        role
+											featuredImage {
+												title
+												file {
+													url
+												}
+											}
+											title
+											slug
+											role
+											overview {
+               					json
+											}
                     }
                 }
             }
@@ -45,10 +54,20 @@ const WorkPage = () => {
                                     <ul className={LayoutStyles.portfolio}>
                                         { allContentfulProjectItem.edges.map((edge) => {
                                             return (
-                                                <li key={edge.node.slug.toString()} className={LayoutStyles.portfolioItem}>
-                                                    <Link to={`/projects/${edge.node.slug}`} className={LayoutStyles.link}><h3>{ edge.node.title }</h3></Link>
-                                                    <h4>{ edge.node.role }</h4>
-                                                </li>
+																							<li key={edge.node.slug.toString()} className={LayoutStyles.portfolioItem}>
+																									<div className={LayoutStyles.portfolioItemInnerWrapper}>
+																										<div className={LayoutStyles.portfolioItemImageContent}>
+																											<img src={edge.node.featuredImage.file.url} alt={edge.node.featuredImage.title}/>
+																										</div>
+																										<div className={LayoutStyles.portfolioItemTextContent}>
+																											<div className={LayoutStyles.portfolioHeading}>
+																												<Link to={`/projects/${edge.node.slug}`} className={LayoutStyles.link}><h3>{ edge.node.title }</h3></Link>
+																												<h4>{ edge.node.role }</h4>
+																											</div>
+																											<p className={LayoutStyles.portfolioDescription}>{ edge.node.overview.json.content[0].content[0].value.substr(0,100)}...</p>
+																										</div>
+																									</div>
+																							</li>
                                             )
                                         })}
                                     </ul>
